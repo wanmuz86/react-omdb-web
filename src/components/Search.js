@@ -28,13 +28,18 @@ class Search extends React.Component{
         // When the button is clicked, I will pass the data up through props
         this.props.handleClick(this.state.value)
     }
+    
  render(){
      return (
-        <div>
+        <div className='row my-3'>
+            <div className='col-8'>
         <input type="text" placeholder="Enter movie name" value={this.state.value} 
-        onChange={this.handleChange}/>
-        <button onClick={this.handleClick}>Search</button>
+        onChange={this.handleChange} className={'form-control'}/>
+        </div>
+        <div className='col-4'>
+        <button onClick={this.handleClick} className={'btn btn-primary btn-block'}>Search</button>
         </div> 
+        </div>
      )
 }
 }

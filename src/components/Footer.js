@@ -1,9 +1,9 @@
 import React from 'react';
 function Footer(){
     return (
-        <main>
-            <p>This is footer</p>
-        </main>
+        <footer className={'bg-dark text-light text-center py-5'}>
+            <p>Copyright &copy; Muz Tech 2020</p>
+        </footer>
     )
 } 
 

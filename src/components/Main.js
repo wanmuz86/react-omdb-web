@@ -18,8 +18,10 @@ class Main extends React.Component{
 render(){
     return (
         <main>
+            <div className={'container'}>
            <Search handleClick={this.getSearch}/>
            <Movie movies={this.state.movies} />
+           </div> 
         </main>
     )
 } 

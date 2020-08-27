@@ -1,9 +1,9 @@
 import React from 'react';
 function Header(){
     return (
-        <main>
-            <p>This is header</p>
-        </main>
+        <header className={'bg-dark text-light py-5 px-5'}>
+            <h1>My favourite movie app!</h1>
+        </header>
     )
 } 
 
