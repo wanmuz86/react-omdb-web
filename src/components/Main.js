@@ -13,19 +13,19 @@ class Main extends React.Component{
         super()
         this.state = {movies:[]}
         this.getSearch = this.getSearch.bind(this);
-        this.getId = this.getId.bind(this);
+        // this.getId = this.getId.bind(this);
     }
 render(){
     return (
         <main>
            <Search handleClick={this.getSearch}/>
-           <Movie movies={this.state.movies} handleClick={this.getId}/>
+           <Movie movies={this.state.movies} />
         </main>
     )
 } 
-getId(imdbId){
-    console.log(imdbId);
-}
+// getId(imdbId){
+//     console.log(imdbId);
+// }
 getSearch(searchTerm){
     
     let url = `https://www.omdbapi.com/?s=${searchTerm}&apikey=87d10179`

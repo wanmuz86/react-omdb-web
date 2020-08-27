@@ -1,5 +1,5 @@
 import React from 'react'
-
+import {Link} from 'react-router-dom';
 function Movie(props){
     console.log(props.movies);
     return (
@@ -7,7 +7,14 @@ function Movie(props){
     <ul>
         {
             props.movies.map(val=>{
-            return <li onClick={()=>props.handleClick(val.imdbID)} key={val.imdbID}>{val.Title}</li>
+            return <Link to={`/detail/${val.imdbID}`}>
+            <div key={val.imdbID}>
+                <img src={val.Poster}></img> 
+                <h3>{val.Title}</h3>
+            <p>{val.Year}</p>
+            </div>
+            </Link>
+            
             })
         }
     
